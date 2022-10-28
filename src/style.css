@@ -24,11 +24,11 @@
   #name::before {
     animation: blink 1s infinite;
     position: absolute;
-    right: -35px;
+    right: -35px !important;
     bottom: 0px;
     content: '';
-    width: 18px;
-    height: 100px;
+    width: 18px !important;
+    height: 100px !important;
     background-color: #14b8a6;
   }
 }
