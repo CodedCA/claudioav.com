@@ -19,42 +19,53 @@
 
     <body class="text-xl md:pl-64 md:pr-64 bg-zinc-900 font-mono pl-8 pr-8 h-full w-full">
 
-        <!-- Header -->
-        <header class="md:w-full hidden md:flex h-16 justify-evenly items-center">
-            <li class="flex md:w-5/6 w-screen text-teal-400 justify-evenly">
-                <ul>Home.</ul>
-                <ul>About.</ul>
-                <ul>Contact.</ul>
+        <!-- Header HIGH SCREEN -->
+        <header class="md:w-full hidden md:flex h-20 justify-between items-center">
+            <img src="./src/favicon.png" class="h-10" alt="">
+            <li class="flex md:w-5/6 w-screen font-bold text-teal-400 justify-evenly">
+                <a href="/">
+                    <ul><span class="num-indicator">01</span> Home.</ul>
+                </a>
+                <a href="#about">
+                    <ul><span class="num-indicator">02</span> About.</ul>
+                </a>
+                <a href="#projects">
+                    <ul><span class="num-indicator">03</span> Projects.</ul>
+                </a>
+                <a href="mailto:coded.coded.gg@gmail.com" target="_blank">
+                    <ul><span class="num-indicator">04</span> Contact.</ul>
+                </a>
+                <a>
+                    <ul><span class="num-indicator">05</span> Resume.</ul>
+                </a>
             </li>
         </header>
 
+        <!-- Header LOW SCREEN -->
+        <header class="md:hidden w-full h-15 mt-8 justify-between flex items-center">
+            <img src="./src/favicon.png" class="h-10" alt="">
+            <button class="bg-teal-300 rounded h-12 w-32" onclick="window.open('mailto:coded.coded.gg@gmail.com');">Contact.</button>
+        </header>
+
         <!-- Main text -->
-        <section class="flex font-mono">
+        <section class="flex font-mono hello md:mt-16 mt-72">
             <div class="h-full w-full flex flex-col md:flex-row justify-between items-center">
-                <div>
-                    <h1 id="name" class="text-teal-300 font-semibold text-5xl md:text-8xl">Cláudio A.</h1>
+                <div class="w-full">
+                    <h1 id="name" class="text-teal-300 font-semibold content-left text-5xl md:text-8xl">Cláudio A.</h1>
                     <div class="flex items-center">
                         <h3 style="font-family: 'IBM Plex Sans Arabic', sans-serif;" class="text-teal-600 xl md:text-4xl"><span class="text-teal-500">{</span>DEV<span class="text-teal-500">}</span></h3>
-                        <a href="mailto:coded.coded.gg@gmail.com" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#14b8a6" stroke-width="2">
+                        <a href="mailto:coded.coded.gg@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#14b8a6" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg></a>
                         <a href="http://github.com/codedca" target="_blank" ><i class="ml-2 text-teal-500 fa-brands fa-github"></i></a>
                         <a href="http://twitter.com/claudio_avgo" target="_blank" ><i class="ml-2 text-teal-500 fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="pt-16 md:pt-0 md:mt-none text-teal-600 font-mono text-xl md:text-2xl h-4/6 md:w-2/4 w-full flex justify-evenly items-center">
-                    <block class="hover:opacity-80 hover:cursor-pointer rounded border-2 border-zinc-700 bg-zinc-900 w-4/5 h-4/5 mr-2 md:mr-0 md:w-2/6 md:h-2/6 flex justify-center items-center">
-                        <h3 style="font-family: 'Source Code Pro', monospace;">Front-end</h3>
-                    </block>
-                    <block class="opacity-80 hover:cursor-not-allowed rounded border-2 border-zinc-800 bg-zinc-900 w-4/5 h-4/5 md:w-2/6 md:h-2/6 flex justify-center items-center">
-                        <h3 style="font-family: 'Source Code Pro', monospace;">Cybersecurity</h3>
-                    </block>
-                </div>
             </div>
         </section>
 
         <!-- Separator with icon -->
-        <separator class="hidden justify-center md:flex">
+        <separator class="justify-center flex mt-16 md:mt-0 md:flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-50" fill="none" viewBox="0 0 24 24" stroke="#14b8a6" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
@@ -63,7 +74,7 @@
         <!-- Apresentation -->
         <main class="main mt-64">
             <!-- About me -->
-            <h3 class="cat text-zinc-300 mb-5 font-mono text-4xl"><span class="cat-hash">#</span> About me.</h3>
+            <h3 id="about" class="cat text-zinc-300 mb-5 font-mono text-4xl"><span class="cat-hash">#</span> About me.</h3>
             <div class="main-desc rounded p-5 mb-10 border-solid border-2 border-teal-500">
                 <h3 class="text-zinc-300 font-mono">
                     CaOS [version 2.0.2.2]
@@ -75,12 +86,15 @@
                 </h3>
             </div>
 
+            <!-- CyberSecurity -->
+
+
             <!-- Projects -->
             <h3 class="cat text-zinc-300 mb-5 font-mono text-4xl"><span class="cat-hash">#</span> Projects.</h3>
 
             <div class="grid md:grid-cols-4 grid-cols-1 gap-4">
                 <a href="http://github.com/codedca/darkbox" target="_blank" >
-                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-60">
+                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-full">
                         <div class="flex flex-row mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -101,7 +115,7 @@
                 </a>
                 
                 <a href="https://github.com/CodedCA/shapeshifter" target="_blank" >
-                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-60">
+                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-full">
                         <div class="flex flex-row mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -120,7 +134,7 @@
                 </a>
 
                 <a href="https://github.com/CodedCA/sharp" target="_blank" >
-                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-60">
+                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-full">
                         <div class="flex flex-row mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -139,7 +153,7 @@
                 </a>
 
                 <a href="https://github.com/CodedCA/ping" target="_blank" >
-                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-60">
+                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-full">
                         <div class="flex flex-row mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -158,7 +172,7 @@
                 </a>
 
                 <a href="http://github.com/codedca" target="_blank" >
-                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-60">
+                    <div class="folder-one bg-zinc-800 p-6 rounded flex border-solid border border-zinc-700 text-zinc-300 flex-col h-48 md:h-72 w-full md:w-full">
                         <div class="flex flex-row mb-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -177,13 +191,11 @@
                 </a>
             </div>
         </main>
-
-
-
+        
     </body>
 
     <footer class="bg-zinc-800 border-solid border border-zinc-700 border-b-0 footer pl-0 pr-0 text-zinc-300 text-center rounded-tr rounded-tl mt-16 h-full w-full">
-        <div class="w-full flex justify-center pb-5 p-10">
+        <div class="w-full flex justify-center pb-3 pt-3 p-10">
             <h1 class="text-base">Made by Cláudio.</h1>
         </div>
     </footer>
